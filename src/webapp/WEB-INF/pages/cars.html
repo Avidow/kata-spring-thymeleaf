@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link th:href="@{/css/style.css}" rel="stylesheet" />
+  <script th:src="@{/js/script.js}"></script>
+</head>
+<body>
+<div class="wrapper">
+  <form>
+    <label for="count" id="countLabel">
+      <input type="number" id="count" name="count" th:value="${cars.size()}" onclick="this.select()">
+    </label>
+    <input type="submit" value="ENTER">
+  </form>
+  <table>
+    <thead>
+    <tr>
+      <th>№</th>
+      <th>Модель</th>
+      <th>Серия</th>
+      <th>Цвет</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car, iteraror : ${cars}">
+      <td th:text="${iteraror.index + 1}"></td>
+      <td th:text="${car.getModel()}"></td>
+      <td th:text="${car.getSeries()}"></td>
+      <td th:text="${car.getColor()}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+<script>
+  document.getElementById('countLabel').insertAdjacentHTML('afterbegin', window.location.host + window.location.pathname + "?count=");
+</script>
+</html>
