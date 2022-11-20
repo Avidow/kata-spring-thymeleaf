@@ -13,17 +13,20 @@ body {
 .wrapper {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 200px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    transform: translate(-50%, -50%);
-    /*filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .5));*/
+    transform: translate(-50%);
 }
 
 form {
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    transform: translate(-50%);
     margin-bottom: 40px;
     display: flex;
     align-items: center;
@@ -52,7 +55,7 @@ label[for="count"] {
 }
 
 input[type="number"] {
-    width: 100px;
+    width: 20vw;
     background: none;
     border: 0;
     outline: none;
@@ -81,10 +84,11 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #4649FF;
+    background-color: #5F8D4E;
 }
 
 table {
+    width: 35vw;
     border-collapse: collapse;
 }
 
@@ -103,18 +107,10 @@ td {
 
 th {
     text-align: left;
-    background-color: #4649FF;
+    background-color: #5F8D4E;
     color: #ffffff;
 }
 
-td {
-    color: #000000;
-}
-
-tr:nth-child(odd) td {
-    background-color: #ffffff;
-}
-
 tr:nth-child(even) td {
-    background-color: #dcdcdc;
+    background-color: #f9f9f9;
 }

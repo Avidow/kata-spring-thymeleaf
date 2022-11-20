@@ -8,11 +8,10 @@
   <script th:src="@{/js/script.js}"></script>
 </head>
 <body>
-<div class="wrapper">
-  <form>
-    <label for="count" id="countLabel">
-      <input type="number" id="count" name="count" th:value="${cars.size()}" onclick="this.select()">
-      <span>
+<form>
+  <label for="count" id="countLabel">
+    <input type="number" id="count" name="count" th:value="${cars.size()}" onclick="this.select()">
+    <span>
         <input type="submit" value="" th:style="
           '-webkit-mask-image: url(/img/icons8-link-64.png);' +
           'mask-image: url(/img/icons8-link-64.png);' +
@@ -22,8 +21,9 @@
           'mask-position: center;'
         ">
       </span>
-    </label>
-  </form>
+  </label>
+</form>
+<div class="wrapper">
   <table>
     <thead>
     <tr>
