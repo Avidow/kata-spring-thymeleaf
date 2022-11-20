@@ -40,10 +40,11 @@ input {
 }
 
 label[for="count"] {
-    padding: 4px 8px;
+    padding: 4px 4px 4px 8px;
     display: inline-flex;
+    align-items: center;
     background-color: #ffffff;
-    color: #404040;
+    color: #8d8d8d;
     border: 1px solid #A0A0A0;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -66,18 +67,21 @@ input[type="number"]::-webkit-inner-spin-button {
 
 input[type="submit"] {
     margin-left: 6px;
-    padding: 4px 8px;
-    background-color: #4649FF;
-    color: #ffffff;
+    padding: 4px 12px;
+    /*background-color: #4649FF;*/
+    background: none;
+    /*font-weight: bold;*/
+    /*color: #ffffff;*/
+    color: #8d8d8d;
     border: 0;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
+    border-left: 1px solid #A0A0A0;
+    /*-webkit-border-radius: 50px;*/
+    /*-moz-border-radius: 50px;*/
+    /*border-radius: 50px;*/
     cursor: pointer;
 }
 
 table {
-    border-spacing: 0;
     border-collapse: collapse;
 }
 
